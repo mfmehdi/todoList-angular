@@ -1,0 +1,29 @@
+<h1>Todo List</h1>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="input-group mb-3">
+            <input ng-model="$ctrl.newTodo" type="text" class="form-control" placeholder="todo....">
+            <div class="input-group-append">
+                <button ng-click="$ctrl.add()" class="input-group-text btn btn-primary" id="basic-addon2">Add</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+<ul>
+    <my-todo ng-repeat="todo in $ctrl.todos track by $index" todo="todo" out="$ctrl.test"></my-todo>
+
+</ul>
+
+
+<h1> one way -- >{{$ctrl.note}}</h1>
+<h1>two way -->{{$ctrl.newTodo}}</h1>
